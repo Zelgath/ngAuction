@@ -11,6 +11,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
+import { AuctionMaterialModule } from './auction-material/auction-material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { StarsComponent } from './stars/stars.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuctionMaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
