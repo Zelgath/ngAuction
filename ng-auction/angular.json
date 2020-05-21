@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngAuction": {
+    "ng-auction": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngAuction",
+            "outputPath": "dist/ng-auction",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,14 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/material-design-icons/iconfont/material-icons.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -71,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngAuction:build"
+            "browserTarget": "ng-auction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngAuction:build:production"
+              "browserTarget": "ng-auction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngAuction:build"
+            "browserTarget": "ng-auction:build"
           }
         },
         "test": {
@@ -119,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngAuction:serve"
+            "devServerTarget": "ng-auction:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngAuction:serve:production"
+              "devServerTarget": "ng-auction:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ngAuction"
+  "defaultProject": "ng-auction"
 }
