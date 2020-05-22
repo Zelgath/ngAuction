@@ -7,15 +7,15 @@ import { NgaMaterialModule } from '../nga-material/nga-material.module';
 
 
 
+
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      {path: '', component: HomeComponent}
-    ]),
     FlexLayoutModule,
-    NgaMaterialModule
-  ]
+    NgaMaterialModule,
+    RouterModule.forChild([{path: '', component: HomeComponent}])
+  ],
+  exports: [HomeComponent]
 })
 export class HomeModule { }

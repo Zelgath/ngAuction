@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class ProductService {
 
-  private API_URL = '/data/products.json';
+  private API_URL = 'http://localhost:3000/products';
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Product[]> {
@@ -17,8 +17,6 @@ export class ProductService {
   }
 
   getById(productId: number): Observable<Product> {
-    return this.http.get<Product[]>(this.API_URL).pipe(
-      map(products => products.find(product => product.id === productId))
-    );
+    return this.http.get<Product>(`${this.API_URL}/${productId}`);
   }
 }
