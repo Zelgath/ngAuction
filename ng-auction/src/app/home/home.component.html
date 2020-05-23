@@ -1,5 +1,5 @@
 <div class="grid-list-container">
-    <mat-grid-list [cols]="4" gutterSize="16">
+    <mat-grid-list [cols]="columns$ | async" gutterSize="16">
         <mat-grid-tile class="tile" *ngFor="let product of products$ | async">
 
             <a class="tile__content" fxLayout="column"

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product.model';
-import {MediaObserver} from '@angular/flex-layout/'
+import {MediaObserver} from '@angular/flex-layout/';
 import { ProductService } from '../shared/services/product.service';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'nga-home',
