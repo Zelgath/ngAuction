@@ -6,6 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductSuggestionComponent } from './product-suggestion/product-suggestion.component';
 import { RouterModule } from '@angular/router';
 import { NgaMaterialModule } from '../nga-material/nga-material.module';
+import { ProductResolve } from '../shared/services/product-resolve.service';
 
 
 
@@ -18,6 +19,6 @@ import { NgaMaterialModule } from '../nga-material/nga-material.module';
       {path: '', component: ProductComponent}
     ]),
     NgaMaterialModule
-  ]
+  ],
 })
 export class ProductModule { }

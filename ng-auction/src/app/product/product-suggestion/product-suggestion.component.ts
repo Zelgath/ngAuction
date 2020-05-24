@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { Observable } from 'rxjs';
 import { MediaObserver } from '@angular/flex-layout';
 import { map, startWith } from 'rxjs/operators';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'nga-product-suggestion',
@@ -11,6 +12,7 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class ProductSuggestionComponent {
   @Input() products: Product[];
+  @Input() product: Product;
   readonly columns$: Observable<number>;
   readonly breakpointsToColumnsNumber = new Map([
     ['xs', 2],
@@ -27,4 +29,5 @@ export class ProductSuggestionComponent {
       startWith(3)
     );
    }
+
 }
