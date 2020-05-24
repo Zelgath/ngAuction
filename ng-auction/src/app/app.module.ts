@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { NgaMaterialModule } from './nga-material/nga-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

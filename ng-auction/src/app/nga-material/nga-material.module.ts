@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule, MatSnackBarConfig, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 const MAT_SNACK_BAR_GLOBAL_CONFIG: MatSnackBarConfig = {
@@ -19,7 +20,8 @@ const MATERIAL_MODULES = [
   MatToolbarModule,
   MatTabsModule,
   MatGridListModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatSidenavModule
 ];
 
 
@@ -29,7 +31,7 @@ const MATERIAL_MODULES = [
   imports: [
     CommonModule
   ],
-  exports: [MATERIAL_MODULES],
+  exports: [...MATERIAL_MODULES],
   providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: MAT_SNACK_BAR_GLOBAL_CONFIG}]
 })
 export class NgaMaterialModule { }

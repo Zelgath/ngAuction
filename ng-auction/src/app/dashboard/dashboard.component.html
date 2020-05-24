@@ -1,0 +1,35 @@
+<ng-container>
+
+  <mat-toolbar class="toolbar">
+    <button class="toolbar__icon-button" mat-icon-button
+    (click)="toggleDrawer()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="toolbar__logo-title-group"
+      fxLayout
+      fxLayoutAlign="center center">
+      <a routerLink="/" fxLayout>
+        <img class="toolbar__logo"
+          src="../assets/logo.svg"
+          alt="NgAuction Logo">
+      </a>
+      <a class="toolbar__title"
+        routerLink="/">NgAuction</a>
+    </div>
+
+    <div fxFlex></div>
+
+    <button mat-icon-button 
+    class="toolbar__icon-button toolbar__shopping-cart-button">
+    <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer-container class="drawer-container" [hasBackdrop]="false" autosize>
+    <mat-drawer #drawer mode="side" class="drawer">I'm a drawer</mat-drawer>
+    <mat-drawer-content class="drawer-content">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+</ng-container>

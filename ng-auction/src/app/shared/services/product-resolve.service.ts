@@ -19,7 +19,7 @@ export class ProductResolve implements Resolve<Product> {
             catchError(err => {
                 if (err.status === 404) {
                     this.toast.open(err.message);
-                    this.router.navigate(['/products']);
+                    this.router.navigate(['/dashboard/products']);
                     return EMPTY;
                 }
             }),
