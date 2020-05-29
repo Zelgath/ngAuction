@@ -1,0 +1,7 @@
+
+<form [formGroup]="searchForm">
+    <mat-form-field>
+        <input matInput placeholder="Product Title" formControlName="title">
+    </mat-form-field>
+</form>
+<pre>{{searchForm.value | json}}</pre>

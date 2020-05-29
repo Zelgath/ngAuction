@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule, MatSnackBarConfig, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 const MAT_SNACK_BAR_GLOBAL_CONFIG: MatSnackBarConfig = {
@@ -21,7 +22,8 @@ const MATERIAL_MODULES = [
   MatTabsModule,
   MatGridListModule,
   MatSnackBarModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatFormFieldModule
 ];
 
 

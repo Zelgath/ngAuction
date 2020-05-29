@@ -8,11 +8,14 @@ import { NgaMaterialModule } from './nga-material/nga-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SearchFormComponent } from './search-form/search-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     NgaMaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
