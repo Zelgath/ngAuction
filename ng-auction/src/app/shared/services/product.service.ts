@@ -26,4 +26,18 @@ export class ProductService {
   getById(productId: number): Observable<Product>  {
     return this.http.get<Product>(`${this.API_URL}/${productId}`);
   }
+
+  getFiltered(input?: string): Observable<Product[]> {
+    return input ? this.http.get<Product[]>(this.API_URL).pipe(
+      map(products => products.filter(product => this.filterProducts(input, product)))
+    )
+    : this.getAll();
+  }
+
+  private filterProducts(input: string, product: Product) {
+    return input.length > 2 ?
+      product.title.substr(0, input.length).toLowerCase()
+        .includes((input + '').toLowerCase())
+      : null;
+  }
 }

@@ -9,7 +9,6 @@
     background-color: mat-color($nga-background, card);
     position: relative;
     box-shadow: 0 1px mat-color($nga-foreground, divider);
-    height: 200px;
 }
 
 .toolbar__logo-title-group {
@@ -25,8 +24,8 @@
 
 .search-form {
     position: absolute;
-    left: 25%;
-    right: 60%;
+    left: 15%;
+    width: 15%;
 }
 
 .toolbar__title {
