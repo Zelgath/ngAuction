@@ -8,6 +8,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSnackBarModule, MatSnackBarConfig, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 const MAT_SNACK_BAR_GLOBAL_CONFIG: MatSnackBarConfig = {
@@ -25,7 +26,8 @@ const MATERIAL_MODULES = [
   MatSnackBarModule,
   MatSidenavModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatAutocompleteModule
 ];
 
 

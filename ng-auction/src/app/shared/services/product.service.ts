@@ -28,7 +28,7 @@ export class ProductService {
   }
 
   getFiltered(input?: string): Observable<Product[]> {
-    return input ? this.http.get<Product[]>(this.API_URL).pipe(
+    return input.length > 2 ? this.http.get<Product[]>(this.API_URL).pipe(
       map(products => products.filter(product => this.filterProducts(input, product)))
     )
     : this.getAll();
