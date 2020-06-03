@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from 'src/app/models/product.model';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -32,6 +32,13 @@ export class ProductService {
       map(products => products.filter(product => this.filterProducts(input, product)))
     )
     : this.getAll();
+  }
+
+  getFilteredForAutoComplete(input?: string) {
+    if (input) {
+      return this.getFiltered(input);
+    }
+    return of ({title: 'no such product'})
   }
 
   private filterProducts(input: string, product: Product) {

@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { Product } from 'src/app/models/product.model';
+import { SearchService } from './search.service';
+import { ProductService } from './product.service';
+import { startWith } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutocompleteService {
 
-  autocompleteSubject = new Subject<boolean>();
+  constructor(private productService: ProductService) {}
 
-  informAutocomplete(value: boolean) {
-    this.autocompleteSubject.next(value);
+  autocompleteSubject = new Subject<Product []>();
+
+  informAutocomplete(value: string) {
+    this.productService.getFiltered(value).subscribe(
+      products => this.autocompleteSubject.next(products)
+    );
   }
 }

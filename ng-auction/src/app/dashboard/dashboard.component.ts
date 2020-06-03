@@ -11,7 +11,6 @@ import { map } from 'rxjs/operators';
 export class DashboardComponent {
 
   @ViewChild('drawer') drawer: MatDrawer;
-  isHome: boolean;
 
   toggleDrawer() {
     this.drawer.toggle();
